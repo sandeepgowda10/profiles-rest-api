@@ -3,4 +3,32 @@ First step:
     'rest_framework',
     'rest_framework.authtoken'
     'profiles_api' ==> this is our created app.
-  
+
+Second step:
+
+    go to models.py of app and write the required things (checkout models.py of app)
+
+Third Step:
+
+    go to settings.py and add ""AUTH_USER_MODEL = 'profiles_api.UserProfile'""
+
+    for accessing it into django admin
+
+Fourth Step:
+    migrate the app..
+    EX - python manage.py makemigration " appname (profiles_api) "
+         python manage.py migrate
+
+
+
+Fifth Step:
+    create super user by
+    "python manage.py createsuperuser"
+    fill all the REQUIRED_FIELds
+
+Sixth Step:
+    for accessing the models in django admin site, register is required
+    go to admin.py and type the below things
+
+  """  from profiles_api import models
+    admin.site.register(models.UserProfile) """

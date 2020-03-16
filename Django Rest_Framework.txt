@@ -1,0 +1,6 @@
+First step:
+    go to project settings.py and navigate to the INSTALLED_APPS and add
+    'rest_framework',
+    'rest_framework.authtoken'
+    'profiles_api' ==> this is our created app.
+  
